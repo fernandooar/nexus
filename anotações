@@ -1,0 +1,77 @@
+rede_social/
+│
+├── index.php          # Ponto de entrada da aplicação
+├── assets/            # Arquivos estáticos (CSS, JS, imagens)
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── src/               # Código PHP
+│   ├── Models/        # Classes de modelo (entidades do banco de dados)
+│   ├── Controllers/   # Lógica de negócios
+│   ├── Database/      # Conexão com o banco de dados
+│   └── Routes/        # Rotas da aplicação
+├── views/             # Páginas HTML
+│   ├── home.php       # Página inicial
+│   ├── cadastro.php   # Página de cadastro
+│   └── login.php     # Página de login
+└── .htaccess          # Configurações do Apache (para URLs amigáveis)
+
+
+1. O que são Namespaces?
+
+Namespaces são como "diretórios virtuais" para suas classes, funções e constantes. Eles ajudam a:
+
+    Organizar o código em grupos lógicos.
+
+    Evitar conflitos de nomes entre classes de diferentes bibliotecas ou partes do sistema.
+
+    Facilitar o autoloading de classes (carregamento automático).
+
+Analogia:
+
+Pense em namespaces como pastas em um computador. Se você tem dois arquivos com o mesmo nome em pastas diferentes, não há conflito. Por exemplo:
+
+    Pasta1/Arquivo.txt
+
+    Pasta2/Arquivo.txt
+
+Da mesma forma, namespaces permitem que você tenha duas classes com o mesmo nome, desde que estejam em namespaces diferentes.
+2. Estrutura do Projeto com Namespaces
+
+Vamos organizar o projeto usando namespaces para cada parte do sistema (models, controllers, etc.). Aqui está a estrutura atualizada:
+
+rede_social/
+│
+├── index.php
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── src/
+│   ├── Models/
+│   │   └── Usuario.php
+│   ├── Controllers/
+│   │   └── UsuarioController.php
+│   ├── Database/
+│   │   └── Database.php
+│   └── Routes/
+│       └── web.php
+├── views/
+│   ├── home.php
+│   ├── cadastro.php
+│   └── login.php
+└── .htaccess
+
+3. Definindo Namespaces
+
+Cada classe pertencerá a um namespace específico, seguindo a estrutura de pastas. Por exemplo:
+
+    A classe Usuario estará no namespace App\Models.
+
+    A classe UsuarioController estará no namespace App\Controllers.
+
+    A classe Database estará no namespace App\Database.
+
+Exemplo: Definindo o Namespace da Classe Usuario
+
+No arquivo src/Models/Usuario.php, adicione o namespace no início do arquivo:
