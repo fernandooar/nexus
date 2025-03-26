@@ -17,9 +17,9 @@ $dadosUsuario = $usuario->buscarPorId($_SESSION["usuario_id"]);
 //$fotoPerfil = !empty($dadosUsuario["foto_perfil"]) ? "uploads/" . $dadosUsuario["foto_perfil"] : "uploads/default.png";
 //$fotoPerfil = $dadosUsuario["foto_perfil"] ? "uploads/" . $dadosUsuario["foto_perfil"] : "uploads/default.png";
 // Verifica se o usuário tem uma foto de perfil
-$fotoPerfil = "/rede_social/uploads/" . $dadosUsuario["foto_perfil"];
+$fotoPerfil = "/nexus/uploads/" . $dadosUsuario["foto_perfil"];
 
-//var_dump($fotoPerfil);
+var_dump($fotoPerfil);
 
 ?>
 <!DOCTYPE html>
